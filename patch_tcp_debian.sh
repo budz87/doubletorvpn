@@ -12,8 +12,8 @@ sudo apt install software-properties-common apt-transport-https wget ca-certific
 sudo wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/xanmod.gpg
 echo 'deb [signed-by=/usr/share/keyrings/xanmod.gpg] http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
 sudo apt update
-sudo apt upgrade
-sudo apt install linux-xanmod-rt
+sudo apt upgrade -y
+sudo apt install linux-xanmod-rt -y
 
 #sudo apt-get install linux-image-5.9.0-0.bpo.5-amd64 -y
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
